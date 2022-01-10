@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class no1 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner (System.in);
+	
+	int p1=0,p2=0,p3=0,q1=0,q2=0,q3=0,total;
+	double discount,price;
+	
+	System.out.print("Enter the number of items: ");
+	int item=sc.nextInt();
+	
+	
+		System.out.print("\nEnter price of first item: ");
+		 p1=sc.nextInt();
+		System.out.print("Enter quantity of first item: ");
+		 q1=sc.nextInt();
+		
+		System.out.print("\nEnter price of second item: ");
+		 p2=sc.nextInt();
+		System.out.print("Enter quantity of second item: ");
+		 q2=sc.nextInt();
+		
+		System.out.print("\nEnter price of third item: ");
+		 p3=sc.nextInt();
+		System.out.print("Enter quantity of third item: ");
+		 q3=sc.nextInt();
+
+		
+		total=(p1*q1)+(p2*q2)+(p3*q3);
+		
+		if (total > 100)
+		{	
+			discount = 0.2* total;
+		}
+		else
+		{
+			discount = 0.1* total;
+		}
+		
+		price=total-discount;
+		
+		System.out.println("Total price           : RM "+total);
+		System.out.printf("Discount received     : RM %.2f", discount);
+		System.out.println("\n Price to be paid      : RM "+price);
+		
+	}
+}
