@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class no2 {
+public static void main(String[] args) {
+	Scanner sc= new Scanner (System.in);
+	double sale,hour,com,wages,totalwages;
+	
+	System.out.print("Enter sales: RM ");
+	sale=sc.nextInt();
+	System.out.print("Enter hour worked: ");
+	hour=sc.nextInt();
+	
+	if (sale > 500)
+	{
+		com = 0.15 * sale;
+	}
+	else if ((sale >= 301) || (sale <=500))
+	{
+		com= 0.10 * sale;
+	}
+	else
+	{
+		com= 0.5 * sale;
+	}
+	
+	wages=hour*5;
+	totalwages=wages+com;
+	
+	System.out.println("Comission: RM "+ com);
+	System.out.println("Daily wages: RM "+ totalwages);
+	
+}
+}
